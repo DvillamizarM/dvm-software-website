@@ -1,5 +1,16 @@
+/* eslint-disable no-unused-vars */
 import Dropdown from "react-dropdown";
 import { useState } from "react";
+import {
+  BtnText,
+  ContactForm,
+  DataField,
+  DropdownDress,
+  FormDescription,
+  InputField,
+  Main,
+} from "../styledComponents/contactme";
+import { FadedDiv } from "../styledComponents/menu";
 export default function Contactame() {
   const [form, setForm] = useState({
     nombre: "",
@@ -10,36 +21,45 @@ export default function Contactame() {
   const options = ["one", "two", "three"];
   const defaultOption = options[0];
   return (
-    <main style={{ padding: "1rem 0", height: "65vh" }}>
-      <h2>Contact me</h2>
-      <form onSubmit={() => {}}>
-        <label>
+    <Main >
+      <FormDescription>Para obtener más información sobre el desarrollo de tu próxima página web o aplicación ingresa tus datos de contacto y nos comunicamos contigo.</FormDescription>
+      <ContactForm onSubmit={() => {}}>
+        <DataField>
           Nombre Completo:
-          <input
+          <InputField
             type="text"
-            value={""}
             onChange={(val) => {
-              setForm({ nombre: val });
+              setForm({ nombre: {val} });
             }}
           />
-        </label>
-        <label>
+        </DataField>
+        <DataField>
           Correo Electrónico:
-          <input type="text"  />
-        </label>
-        <label>
+          <InputField type="email" />
+        </DataField>
+        <DataField>
           Número telefónico:
-          <input type="text"  />
-        </label>
-        <Dropdown
-          options={options}
-          onChange={(value, index) => {}}
-          value={defaultOption}
-          placeholder="Select an option"
-        />
-        ;
-        <input type="submit" value="Submit" />
-      </form>
-    </main>
+          <InputField type="phone-number" />
+        </DataField>
+
+        {/* <DataField>
+          Que tipo de app estás pensando?
+          <DropdownDress>
+            <Dropdown
+              options={options}
+              onChange={(value, index) => {}}
+              style={{
+                fontFamily: "Murecho",
+                fontWeight: "700",
+                fontSize: "3.2vh",
+              }}
+              value={defaultOption}
+              placeholder="Select an option"
+            />
+          </DropdownDress>
+        </DataField> */}
+          <BtnText type="submit" value="Enviar Datos" />
+      </ContactForm>
+    </Main>
   );
 }

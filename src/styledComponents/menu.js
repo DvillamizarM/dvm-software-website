@@ -28,7 +28,7 @@ export const Slidey = styled.div`
 
 export const BtnDiv = styled.div`
   width: 100%;
-  hright: 100%;
+  height: 100%;
   display: grid;
 `;
 

@@ -35,7 +35,8 @@ import docker from "../imgs/docker.png";
 import github from "../imgs/github.png";
 import { useContext } from "react";
 import { Context } from "../App";
-
+import { BtnText, FadedDiv } from "../styledComponents/menu";
+import { Link } from "react-router-dom";
 
 const InicialSlogan = () => {
   const stringList = [
@@ -72,7 +73,7 @@ const TechCarousel = () => {
     <MainCarouselDiv>
       <CarouselItem>
         <TechGroupDiv>
-        <TechItemDiv>
+          <TechItemDiv>
             <TechItemImg
               src={javascript}
               alt="Logo del lenguaje de programación Javascript"
@@ -160,7 +161,7 @@ const AboutMe = () => {
           sistemas del 2016 al 2021 en la Universidad de Santander Campus Cúcuta
           en Colombia. A raíz de mi formación profesional encontré mi pasión en
           el desarrollo de software. <br />
-          <br /> Mi objetivo siempre es ofrecer las soluciones informaticas más
+          <br /> Mi objetivo siempre es ofrecer las soluciones informáticas más
           óptimas para suplir aquellas necesidades que tienen las personas.
         </SmallText>
       </AboutMeText>
@@ -168,9 +169,9 @@ const AboutMe = () => {
   );
 };
 
-export default function Home() {  
+export default function Home() {
   const value = useContext(Context);
-  console.log("context----", value)
+  console.log("context----", value);
   return (
     <MainHomeDiv>
       <TopDiv>
@@ -188,6 +189,16 @@ export default function Home() {
               Soluciones informáticas para las pequeñas y grandes partes de tú
               día.
             </DescripcionText> */}
+          <div style={{ width: "70%" }}>
+            <FadedDiv style={{ padding:"0.2em"}}>
+            <Link to="/contactme" style={styles.menuBtn}>
+              
+              <BtnText style={{ fontSize: "4.5vw" }}>
+                <span>Más información</span>
+              </BtnText>
+              </Link>
+            </FadedDiv>
+          </div>
         </TopDescription>
         <TopGroupedDiv>
           <TopAboutMe>
@@ -195,12 +206,21 @@ export default function Home() {
           </TopAboutMe>
           <TopSlogan>
             <InnerSloganDiv>
-            <InicialSlogan />
+              <InicialSlogan />
             </InnerSloganDiv>
           </TopSlogan>
         </TopGroupedDiv>
-          <TechCarousel />
+        <TechCarousel />
       </TopDiv>
     </MainHomeDiv>
   );
 }
+
+const styles = {
+  menuBtn: {
+    textDecoration: "none",
+    color: "#000000",
+    display:"grid",
+    margin:"auto",
+  },
+};

@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import styled, { keyframes } from "styled-components";
 //---------- keyframes-----------
 
@@ -14,7 +15,6 @@ const introAnimate = keyframes`
     0%,80%{
         opacity:0;
         margin-top:-100%;
-        height:100%;
         font-weight:600;
     }
     80% {
@@ -57,7 +57,6 @@ const animateShowAllSlogan = keyframes`
   }100%{
     width: 50%;
     height: 50vh;
-    
     opacity: 1;
     margin:auto;
     justify-content: center;
@@ -109,29 +108,30 @@ const animateAboutMeSmall = keyframes`
 export const MainSloganDiv = styled.div`
   overflow: hidden;
   display: flex;
-  align-items: start;
+  justify-content: center;
+  align-items: center;
 `;
 
 export const SloganStringDiv = styled.div`
   animation-name: ${stirngAnimate};
   animation-iteration-count: 1;
+  animation-delay: 6s;
   display: flex;
-  justify-content: center;
-  align-items: top;
+  height: 10vh;
+  align-items: center;
 `;
 
 export const BlipText = styled.h2`
   font-family: "Murecho";
   font-weight: 700;
   font-size: 7vh;
-
-  height: 40vh;
+  height: 100%;
   animation-name: ${introAnimate};
   animation-fill-mode: forwards;
   animation-iteration-count: 1;
+  animation-delay: 6s;
   animation-timing-function: cubic-bezier(0.165, 0.44, 0.64, 1);
   opacity: 0;
-
   @media (max-width: 40em) {
     font-weight: 700;
     font-size: 5vh;
@@ -155,11 +155,7 @@ export const TopDiv = styled.div`
     rgba(137, 90, 235, 0.5) 70%,
     rgba(240, 240, 240, 1) 100%
   );
-  animation-name: ${animateMainTop};
-  animation-iteration-count: 1;
-  animation-delay: 4s;
-  animation-duration: 500ms;
-  animation-fill-mode: forwards;
+  grid-template-rows: 30%, 70%;
   @media (max-width: 40em) {
     flex-direction: column;
     justify-content: space-bettween;
@@ -171,70 +167,49 @@ export const TopGroupedDiv = styled.div`
   justify-content: start;
   align-items: center;
   width: 100%;
-  height: 70vh;
+  height: 26vw;
   @media (max-width: 50em) {
     flex-direction: column;
-    min-height: 100vh;
-    justify-content: space-bettween;
+    height: 100vh;
+    justify-content: start;
+    
+  }
+  @media (max-width: 40em) {
+    height: 150vh;
   }
 `;
 
 export const TopSlogan = styled.div`
-  width: 100%;
-  height: 100vh;
-  display: grid;
-  grid-template-rows: 1fr 1fr 1fr;
-  @media (max-width: 45em) {
-    margin-top: -100%;
-  }
-  animation-name: ${animateShowAllSlogan};
-  animation-delay: 4s;
-  animation-duration: 500ms;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
+  height: 50vh;
+  opacity: 1;
+  margin:auto;
 `;
 
 export const InnerSloganDiv = styled.div`
-  margin: auto;
-  background-color: pink;
+  height: 33.3%;
+  margin-top: 2.5em;
 `;
 
 export const TopDescription = styled.div`
-  animation-name: ${animateShowAll};
-  animation-delay: 4s;
-  animation-iteration-count: 1;
-  animation-duration: 500ms;
-  animation-fill-mode: forwards;
-  opacity: 0;
+  margin: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  border-bottom: 2px solid #120a24;
+  padding-bottom:3vw;
   align-items: center;
   overflow-y: hidden;
-  margin-bottom: 1.5vw;
-`;
-
-export const DescripcionText = styled.h3`
-  margin-top: 1.5%;
-  font-family: "Murecho";
-  font-weight: 500;
-  text-align: center;
-  font-size: 7vh;
+  margin-bottom: 2vh;
 `;
 
 export const TopAboutMe = styled.div`
-  width: 0%;
-  overflow: hidden;
-  animation-name: ${animateAboutMe};
-  animation-iteration-count: 1;
-  animation-delay: 4s;
-  animation-duration: 500ms;
-  animation-fill-mode: forwards;
-
+  overflow: auto;
+  width: 60%;
   @media (max-width: 60em) {
     display: flex;
     justify-content: center;
-    animation-name: ${animateAboutMeSmall};
+    align-items:center;
+    width: 95%;
   }
 `;
 
@@ -242,15 +217,17 @@ export const TopAboutMe = styled.div`
 
 export const AboutMeDiv = styled.div`
   display: flex;
-  margin: auto;
-  flex-direction: reverse-column;
+  flex-direction: row;
+  overflow:hidden;
   justify-content: space-evenly;
   align-items: center;
   border-right: 2px solid #120a24;
-  width: 100%;
-  height: 80%;
+  width: 98%;
+  height: 100%;
   @media (max-width: 25em) {
-    flex-direction: column;
+    display:grid;
+    grid-template-rows: 1fr 2fr;
+    border-right: 0px solid #120a24;
   }
 `;
 
@@ -258,9 +235,10 @@ export const ProfilePicDiv = styled.div`
   max-height: 100%;
   max-width: 25%;
   display: grid;
+  margin:auto;
   @media (max-width: 40em) {
     max-width: 40%;
-    margin-bottom: 5vh;
+    display:flex;
   }
 `;
 
@@ -270,20 +248,15 @@ export const ProfilePic = styled.img`
   border-radius: 10%;
   margin: auto;
   @media (max-width: 40em) {
-    margin-top: 12vh;
-    width: 80%;
-    height: 80%;
   }
 `;
 
 export const AboutMeText = styled.div`
   max-height: 100%;
-  max-width: 60%;
+  max-width: 70%;
+    padding-right:2%;
   @media (max-width: 40em) {
-    max-width: 90vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    max-width: 100%;
   }
 `;
 
@@ -291,8 +264,9 @@ export const SmallText = styled.p`
   font-family: "Murecho";
   font-weight: 500;
   font-size: 3.3vh;
+  text-align:justify;
   @media (max-width: 50em) {
-    font-size: 2.6vh;
+    font-size: 3.2vh;
   }
 `;
 
@@ -300,17 +274,10 @@ export const SmallText = styled.p`
 
 export const MainCarouselDiv = styled.div`
   width: 80vw;
-  animation-name: ${animateShowAll};
-  animation-iteration-count: 1;
-  animation-delay: 4s;
-  animation-duration: 500ms;
-  animation-fill-mode: forwards;
-  opacity: 0;
+  margin: auto;
   overflow-y: hidden;
-  @media (max-width: 60em) {
-    padding-top: 8vh;
-    padding-bottom: 8vh;
-  }
+  padding-top: 3vh;
+  padding-bottom: 8vh;
 `;
 
 // const white-gradient = styled.mixin`
@@ -351,7 +318,6 @@ export const GroupTitle = styled.p`
   text-align: center;
   display: flex;
   align-items: center;
-  border-bottom: 2px solid #120a24;
   width: 90%;
   font-family: "Murecho";
   font-weight: 340;
