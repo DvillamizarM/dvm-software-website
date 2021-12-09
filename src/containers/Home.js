@@ -180,7 +180,7 @@ export default function Home() {
               <i>
                 Desarrollo ágil de aplicaciones moviles, web y de escritorio con
                 alta calidad y diseño centrado en el usuario para sus proyectos
-                personales, empresariales y de investigación.
+                personales y empresariales.
               </i>
             </strong>
           </GroupTitle>
