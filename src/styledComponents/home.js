@@ -228,7 +228,6 @@ export const AboutMeDiv = styled.div`
     height: 100%;
     display:grid;
     grid-template-rows: 1fr 1fr;
-    background-color:green;
     border-right: 0px solid #120a24;
   }
 `;
