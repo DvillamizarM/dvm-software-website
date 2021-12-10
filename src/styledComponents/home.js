@@ -3,7 +3,7 @@ import styled, { keyframes } from "styled-components";
 //---------- keyframes-----------
 
 const stirngAnimate = keyframes`
-    0%, 50%{
+    0%, 30%{
         opacity:0;
         margin-top:-100%;
     } 60%{
@@ -26,14 +26,13 @@ const introAnimate = keyframes`
     }
     90% {
         opacity:0.6;
-        font-weight:500;
     }
     95% {
         opacity:0.8;
     }
     100% {
         opacity:1;
-        font-weight:400;
+        font-weight:500;
     }
   
 `;
@@ -169,7 +168,7 @@ animation-iteration-count: 1;
 animation-duration: 1s;
 animation-delay: 3s;
 height: 100vh; 
-margin:0%;
+margin-top: -20vh;
 width: 100vw;
 display:flex;
 justify-content:center;

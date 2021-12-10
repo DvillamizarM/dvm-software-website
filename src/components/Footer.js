@@ -8,6 +8,7 @@ import {
   BtnText,
   MenuItem,
 } from "../styledComponents/footer";
+import trasparentDVM from "../imgs/transparentDVM.png"
 
 export default function Home() {
   return (
@@ -21,10 +22,7 @@ export default function Home() {
         </InfoText>
       </Column>
       <Column>
-        <TagText>
-          haz lo que amas <br />
-          ama lo que haces
-        </TagText>
+        <img style={{maxWidth:"20%", margin:"auto"}} src= {trasparentDVM} alt="DVM SOftware Logo" />
       </Column>
       <ColumnMenu>
             <MenuItem>

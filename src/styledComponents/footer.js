@@ -19,6 +19,7 @@ export const Main = styled.div`
 
 export const Column = styled.div`
   margin: auto;
+  display:grid;
 `;
 
 export const ColumnMenu = styled.div`
@@ -28,6 +29,7 @@ export const ColumnMenu = styled.div`
   justify-content: space-evenly;
   align-items: center;
   @media (max-width: 40em) {
+    margin-top: -6vh;
     padding-top: 4vh;
     padding-bottom: 5vh;
     flex-direction: row;

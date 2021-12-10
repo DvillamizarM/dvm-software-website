@@ -49,7 +49,7 @@ const InicialSlogan = () => {
   const sloganAnimated = stringList.map((string, index1) => {
     return (
       <MainSloganDiv>
-        <SloganStringDiv style={{ animationDuration: 0.2 * index1 + "s" }}>
+        <SloganStringDiv style={{ animationDuration: 0.3 * index1 + "s" }}>
           {string.split("").map((char, index2) => {
             return (
               <BlipText
