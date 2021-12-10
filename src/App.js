@@ -3,10 +3,8 @@ import { useEffect } from "react";
 import { Outlet } from "react-router";
 import Menu from "./components/Menu";
 import Footer from "./components/Footer";
-import { createContext } from "react";
-
-
-export const Context = createContext(true);
+import { useState } from "react";
+import { Context } from "./Context.js";
 
 export default function App() {
   useEffect(() => {
@@ -19,11 +17,11 @@ export default function App() {
   }, []);
 
   // window.addEventListener('resize', turnoffAnimations());
-
+  const [context, setContext] = useState(true);
 
   return (
     <main>
-      <Context.Provider value={true}>
+      <Context.Provider value={[context, setContext]}>
         <header >
           <div>
             <Menu />

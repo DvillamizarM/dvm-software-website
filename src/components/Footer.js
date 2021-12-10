@@ -16,7 +16,7 @@ export default function Home() {
         <InfoText>
           <strong>
             ©2022 Daniela Villamizar Mendoza <br /> Desarrolladora de Software{" "}
-            <br /> danii.codes@gmail.com <br /> +57 316 823 6359
+            <br /> dvmsoftech@gmail.com <br /> +57 316 823 6359
           </strong>
         </InfoText>
       </Column>

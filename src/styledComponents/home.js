@@ -73,11 +73,11 @@ const animateShowAllSlogan = keyframes`
 // `;
 
 const animateAboutMe = keyframes`
-20%{
-  width:20%;
-}40%{
-  width: 30% ;
-}
+    20%{
+      width:20%;
+    }40%{
+      width: 30% ;
+    }
     60%{
       width:40%;
     }80%{
@@ -85,6 +85,29 @@ const animateAboutMe = keyframes`
     }100%{
       width: 60% ;
     }
+`;
+
+
+const appearAnimation = keyframes`
+0%,80%{
+  opacity:1;
+}
+80% {
+  opacity:0.8;
+}
+85% {
+  opacity:0.6;
+}
+90% {
+  opacity:0.4;
+  font-weight:500;
+}
+95% {
+  opacity:0.2;
+}
+100% {
+  opacity:0;
+}
 `;
 
 const animateAboutMeSmall = keyframes`
@@ -136,6 +159,28 @@ export const BlipText = styled.h2`
     font-weight: 700;
     font-size: 5vh;
   }
+`;
+
+export const IntroDiv = styled.div`
+
+animation-name: ${appearAnimation};
+animation-fill-mode: forwards;
+animation-iteration-count: 1;
+animation-duration: 1s;
+animation-delay: 3s;
+height: 100vh; 
+margin:0%;
+width: 100vw;
+display:flex;
+justify-content:center;
+align-items:center;
+background: linear-gradient(
+  180deg,
+  rgba(240, 240, 240, 1) 30%,
+  rgba(137, 90, 235, 0.5) 50%,
+  rgba(240, 240, 240, 1) 70%
+);
+
 `;
 
 //----- higher level div styles - animations
@@ -264,10 +309,10 @@ export const AboutMeText = styled.div`
 export const SmallText = styled.p`
   font-family: "Murecho";
   font-weight: 500;
-  font-size: 3.3vh;
+  font-size: 1em;
   text-align:justify;
   @media (max-width: 50em) {
-    font-size: 3.2vh;
+    font-size: 0.85em;
   }
 `;
 

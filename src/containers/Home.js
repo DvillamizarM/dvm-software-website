@@ -5,6 +5,7 @@ import {
   CarouselItem,
   GroupTitle,
   InnerSloganDiv,
+  IntroDiv,
   MainCarouselDiv,
   MainHomeDiv,
   MainSloganDiv,
@@ -33,10 +34,10 @@ import figma from "../imgs/figma.png";
 import nodejs from "../imgs/nodejs.png";
 import docker from "../imgs/docker.png";
 import github from "../imgs/github.png";
-import { useContext } from "react";
-import { Context } from "../App";
+import { useState, useEffect, useContext } from "react";
 import { BtnText, FadedDiv } from "../styledComponents/menu";
 import { Link } from "react-router-dom";
+import { Context } from "../Context.js";
 
 const InicialSlogan = () => {
   const stringList = [
@@ -44,6 +45,7 @@ const InicialSlogan = () => {
     "Crear experiencias",
     "Innovar vidas",
   ];
+
   const sloganAnimated = stringList.map((string, index1) => {
     return (
       <MainSloganDiv>
@@ -170,57 +172,74 @@ const AboutMe = () => {
 };
 
 export default function Home() {
-  const value = useContext(Context);
-  console.log("context----", value);
-  return (
-    <MainHomeDiv>
-      <TopDiv>
-        <TopDescription>
-          <GroupTitle>
-            <strong>
-              <i>
-                Desarrollo ágil de aplicaciones moviles, web y de escritorio con
-                alta calidad y diseño centrado en el usuario para sus proyectos
-                personales y empresariales.
-              </i>
-            </strong>
-          </GroupTitle>
-          {/* <DescripcionText>
+  const [context, setContext] = useContext(Context);
+
+  useEffect(() => {
+    if (context) {
+      const timer = setTimeout(() => {
+        setContext(false);
+        clearTimeout(timer);
+      }, 4000);
+    }
+  }, []);
+
+  if (context)
+    return (
+      <IntroDiv>
+        <InnerSloganDiv>
+          <InicialSlogan />
+        </InnerSloganDiv>
+      </IntroDiv>
+    );
+  else
+    return (
+      <MainHomeDiv>
+        <TopDiv>
+          <TopDescription>
+            <GroupTitle>
+              <strong>
+                <i>
+                  Desarrollo ágil de aplicaciones moviles, web y de escritorio
+                  con alta calidad y diseño centrado en el usuario para sus
+                  proyectos personales y empresariales.
+                </i>
+              </strong>
+            </GroupTitle>
+            {/* <DescripcionText>
               Soluciones informáticas para las pequeñas y grandes partes de tú
               día.
             </DescripcionText> */}
-          <div style={{ width: "70%" }}>
-            <FadedDiv style={{ padding:"0.2em"}}>
-            <Link to="/contactme" style={styles.menuBtn}>
-              
-              <BtnText style={{ fontSize: "4.5vw" }}>
-                <span>Más información</span>
-              </BtnText>
-              </Link>
-            </FadedDiv>
-          </div>
-        </TopDescription>
-        <TopGroupedDiv>
-          <TopAboutMe>
-            <AboutMe />
-          </TopAboutMe>
-          <TopSlogan>
-            <InnerSloganDiv>
-              <InicialSlogan />
-            </InnerSloganDiv>
-          </TopSlogan>
-        </TopGroupedDiv>
-        <TechCarousel />
-      </TopDiv>
-    </MainHomeDiv>
-  );
+            <div style={{ width: "70%" }}>
+              <FadedDiv style={{ padding: "0.2em" }}>
+                <Link to="/contactme" style={styles.menuBtn}>
+                  <BtnText style={{ fontSize: "4.5vw" }}>
+                    <span>Más información</span>
+                  </BtnText>
+                </Link>
+              </FadedDiv>
+            </div>
+          </TopDescription>
+          <TopGroupedDiv>
+            <TopAboutMe>
+              <AboutMe />
+            </TopAboutMe>
+            <TopSlogan>
+              <InnerSloganDiv>
+                <InicialSlogan />
+              </InnerSloganDiv>
+            </TopSlogan>
+          </TopGroupedDiv>
+          <TechCarousel />
+        </TopDiv>
+      </MainHomeDiv>
+    );
 }
 
 const styles = {
   menuBtn: {
     textDecoration: "none",
     color: "#000000",
-    display:"grid",
-    margin:"auto",
+    display: "grid",
+    margin: "auto",
   },
 };
