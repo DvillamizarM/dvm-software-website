@@ -168,14 +168,14 @@ export const TopGroupedDiv = styled.div`
   align-items: center;
   width: 100%;
   height: 26vw;
-  @media (max-width: 50em) {
+  @media (max-width: 60em) {
     flex-direction: column;
     height: 100vh;
     justify-content: start;
     
   }
   @media (max-width: 40em) {
-    height: 150vh;
+    height: 140vh;
   }
 `;
 
@@ -224,9 +224,11 @@ export const AboutMeDiv = styled.div`
   border-right: 2px solid #120a24;
   width: 98%;
   height: 100%;
-  @media (max-width: 25em) {
+  @media (max-width: 40em) {
+    height: 100%;
     display:grid;
-    grid-template-rows: 1fr 2fr;
+    grid-template-rows: 1fr 1fr;
+    background-color:green;
     border-right: 0px solid #120a24;
   }
 `;
