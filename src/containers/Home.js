@@ -175,8 +175,8 @@ export default function Home() {
   const [context, setContext] = useContext(Context);
 
   useEffect(() => {
-    if (context) {
       window.scrollTo(0, 0);
+    if (context) {
       const timer = setTimeout(() => {
         setContext(false);
         clearTimeout(timer);
