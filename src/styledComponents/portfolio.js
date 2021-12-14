@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const ProjectList = styled.div`
   width: 80%;
   display: grid;
-  grid-template-rows: 1fr;
+  grid-template-rows: 1fr 1fr;
   gap: 4vh;
   @media (max-width: 40em) {
     width: 90%;
@@ -56,9 +56,10 @@ export const AppDescriptionDiv = styled.div`
 `;
 
 export const AppTechs = styled.div`
-  display: grid;
-  width: 50%;
-  grid-template-columns: 1fr 1fr 1fr;
+  display: flex;
+  flex-direction: row;
+  width: 60%;
+  justify-content:space-evenly;
 `;
 
 export const TechItemImg = styled.img`
@@ -76,7 +77,7 @@ export const AppDownloads = styled.div`
   }
 `;
 
-export const BtnText = styled.button`
+export const BtnText = styled.a`
   margin: auto;
   appearance: none;
   &:hover {
@@ -95,6 +96,7 @@ export const BtnText = styled.button`
   width: 100%;
   display: grid;
   cursor: pointer;
+  padding:0.5em;
   transition: 0.4s all;
   border-radius: 10vh 10vh 0vh 10vh;
   z-index: 1;
@@ -102,8 +104,10 @@ export const BtnText = styled.button`
     margin-bottom: 3vh;
     font-size:0.8em;
   }
-  font-size: 0.8em;
+  text-decoration: none;
+  font-size: 1em;
   font-family: "Murecho";
+  text-align:center;
   font-weight: 1000;
   color: #120a24;
 `;

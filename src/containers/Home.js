@@ -34,7 +34,7 @@ import figma from "../imgs/figma.png";
 import nodejs from "../imgs/nodejs.png";
 import docker from "../imgs/docker.png";
 import github from "../imgs/github.png";
-import { useState, useEffect, useContext } from "react";
+import { useEffect, useContext } from "react";
 import { BtnText, FadedDiv } from "../styledComponents/menu";
 import { Link } from "react-router-dom";
 import { Context } from "../Context.js";
@@ -181,6 +181,7 @@ export default function Home() {
         clearTimeout(timer);
       }, 4000);
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   if (context)

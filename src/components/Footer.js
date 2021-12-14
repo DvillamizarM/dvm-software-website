@@ -4,7 +4,6 @@ import {
   ColumnMenu,
   InfoText,
   Main,
-  TagText,
   BtnText,
   MenuItem,
 } from "../styledComponents/footer";
