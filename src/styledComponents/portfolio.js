@@ -27,6 +27,8 @@ export const AppTitle = styled.h3`
   font-family: "Murecho";
   font-weight: 600;
   font-size: 4vh;
+  width:100%;
+  text-align:center;
   @media (max-width: 25em) {
       margin-top:-2%;
   }

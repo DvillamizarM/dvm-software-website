@@ -122,7 +122,7 @@ export default function Contactame() {
           {errors.cell && <ErrorMsg> {errors.cell?.message} </ErrorMsg>}
         </DataField>
         <DataField>
-          Descripción de tu idea para el software (opcional):
+          Descripción del software (opcional):
           <TextField name="description" />
         </DataField>
         <BtnText type="submit" value="Enviar Datos" />
