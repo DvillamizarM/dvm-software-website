@@ -20,6 +20,7 @@ import firebase from "../imgs/firebase.png";
 import redux from "../imgs/redux.png";
 import expologo from "../imgs/expologo.png";
 import java from "../imgs/java.png";
+import { useEffect } from "react";
 
 function Apptivate() {
   return (
@@ -98,12 +99,12 @@ function Alerta() {
         </AppTechs>
       </AppDescriptionDiv>
       <AppDownloads>
-        <BtnText
+        {/* <BtnText
           href="https://drive.google.com/file/d/1GSZ5mm-CIpbnQ-1xWQn_PXku-n0T-aiO/view?usp=sharing"
           target="_blank"
         >
           Descargar para Android (APK)
-        </BtnText>
+        </BtnText> */}
         {/* <BtnText>Descargar con Expo (para iOS)</BtnText> */}
         <BtnText
           href="https://github.com/DvillamizarM/AlertaCucuta"
@@ -118,8 +119,11 @@ function Alerta() {
 }
 
 export default function Portfolio() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
-    <Main style={{background:"#fff"}}>
+    <Main style={{ background: "#fff" }}>
       <FormDescription>
         Colección de aplicaciones desarrolladas por Daniela Villamizar Mendoza.
         Las tecnologías utilizadas incluyen React JS, React Native, Java,
@@ -127,7 +131,7 @@ export default function Portfolio() {
       </FormDescription>
       <ProjectList>
         <Apptivate />
-        <Alerta/>
+        <Alerta />
       </ProjectList>
     </Main>
   );

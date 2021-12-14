@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import {
   BtnText,
   ContactForm,
@@ -87,6 +87,10 @@ export default function Contactame() {
   // const submitRevamped = ()=>{
   //   toastifySuccess();
   // }
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <Main>

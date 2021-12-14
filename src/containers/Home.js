@@ -176,12 +176,13 @@ export default function Home() {
 
   useEffect(() => {
     if (context) {
+      window.scrollTo(0, 0);
       const timer = setTimeout(() => {
         setContext(false);
         clearTimeout(timer);
       }, 4000);
     }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   if (context)
