@@ -43,13 +43,13 @@ export default function Menu() {
               </Link>
             </FadedDiv>
           </BtnDiv>
-          {/* <BtnDiv>
+          <BtnDiv>
             <FadedDiv>
               <Link to="/aboutme" style={styles.menuBtn}>
                 <BtnText>Sobre Mi</BtnText>
               </Link>
             </FadedDiv>
-          </BtnDiv> */}
+          </BtnDiv>
           <BtnDiv>
             <FadedDiv>
               <Link to="/portfolio" style={styles.menuBtn}>

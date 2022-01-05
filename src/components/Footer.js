@@ -21,15 +21,15 @@ export default function Home() {
         </InfoText>
       </Column>
       <Column>
-        <img style={{maxWidth:"20%", margin:"auto"}} src= {trasparentDVM} alt="DVM SOftware Logo" />
+        <img style={{maxWidth:"30%", margin:"auto", padding:"10%"}} src= {trasparentDVM} alt="DVM SOftware Logo" />
       </Column>
       <ColumnMenu>
             <MenuItem>
               <Link
                 to="/"
-                style={{
-                  marginTop: "-10%",
-                }}
+                // style={{
+                //   marginTop: "-10%",
+                // }}
               >
                 <BtnText>Inicio</BtnText>
               </Link>
@@ -37,9 +37,9 @@ export default function Home() {
         <MenuItem>
           <Link
             to="/portfolio"
-            style={{
-              marginTop: "-10%",
-            }}
+            // style={{
+            //   marginTop: "-10%",
+            // }}
           >
             <BtnText>Portafolio</BtnText>
           </Link>
@@ -47,9 +47,9 @@ export default function Home() {
         <MenuItem>
           <Link
             to="/contactme"
-            style={{
-              marginTop: "-10%",
-            }}
+            // style={{
+            //   marginTop: "-10%",
+            // }}
           >
             <BtnText>Contactame</BtnText>
           </Link>

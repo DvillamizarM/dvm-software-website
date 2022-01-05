@@ -37,31 +37,31 @@ const introAnimate = keyframes`
   
 `;
 
-const animateMainTop = keyframes`
-grid-template-rows: 30%, 70%;
-`;
+// const animateMainTop = keyframes`
+// grid-template-rows: 30%, 70%;
+// `;
 
-const animateShowAll = keyframes`
-  50% {
-    opacity:0;
-  }100%{
-    opacity: 1;
-    margin:auto;
-  };
-`;
+// const animateShowAll = keyframes`
+//   50% {
+//     opacity:0;
+//   }100%{
+//     opacity: 1;
+//     margin:auto;
+//   };
+// `;
 
-const animateShowAllSlogan = keyframes`
-  50% {
-    opacity:0;
-  }100%{
-    width: 50%;
-    height: 50vh;
-    opacity: 1;
-    margin:auto;
-    justify-content: center;
-    align-items: center;
-  };
-`;
+// const animateShowAllSlogan = keyframes`
+//   50% {
+//     opacity:0;
+//   }100%{
+//     width: 50%;
+//     height: 50vh;
+//     opacity: 1;
+//     margin:auto;
+//     justify-content: center;
+//     align-items: center;
+//   };
+// `;
 
 // const meImg = keyframes`
 //     100%{
@@ -71,20 +71,20 @@ const animateShowAllSlogan = keyframes`
 //     }
 // `;
 
-const animateAboutMe = keyframes`
-    20%{
-      width:20%;
-    }40%{
-      width: 30% ;
-    }
-    60%{
-      width:40%;
-    }80%{
-      width: 50% ;
-    }100%{
-      width: 60% ;
-    }
-`;
+// const animateAboutMe = keyframes`
+//     20%{
+//       width:20%;
+//     }40%{
+//       width: 30% ;
+//     }
+//     60%{
+//       width:40%;
+//     }80%{
+//       width: 50% ;
+//     }100%{
+//       width: 60% ;
+//     }
+// `;
 
 
 const appearAnimation = keyframes`
@@ -109,20 +109,20 @@ const appearAnimation = keyframes`
 }
 `;
 
-const animateAboutMeSmall = keyframes`
-20%{
-  width:20%;
-}40%{
-  width: 40% ;
-}
-    60%{
-      width:60%;
-    }80%{
-      width: 80% ;
-    }100%{
-      width: 95%;
-    }
-`;
+// const animateAboutMeSmall = keyframes`
+// 20%{
+//   width:20%;
+// }40%{
+//   width: 40% ;
+// }
+//     60%{
+//       width:60%;
+//     }80%{
+//       width: 80% ;
+//     }100%{
+//       width: 95%;
+//     }
+// `;
 //---------styles------------
 
 //-------intro animation
@@ -167,7 +167,7 @@ animation-fill-mode: forwards;
 animation-iteration-count: 1;
 animation-duration: 1s;
 animation-delay: 3s;
-height: 100vh; 
+height: 120vh; 
 margin-top: -20vh;
 width: 100vw;
 display:flex;
@@ -189,16 +189,16 @@ export const MainHomeDiv = styled.div`
   background-repeat: no-repeat;
   background-size: 100% 100%;
 `;
-
+// background: linear-gradient(
+//     180deg,
+//     rgba(240, 240, 240, 1) 40%,
+//     rgba(137, 90, 235, 0.5) 70%,
+//     rgba(240, 240, 240, 1) 100%
+//   );
 export const TopDiv = styled.div`
   display: grid;
   position: relative;
-  background: linear-gradient(
-    180deg,
-    rgba(240, 240, 240, 1) 40%,
-    rgba(137, 90, 235, 0.5) 70%,
-    rgba(240, 240, 240, 1) 100%
-  );
+  
   grid-template-rows: 30%, 70%;
   @media (max-width: 40em) {
     flex-direction: column;
@@ -240,7 +240,7 @@ export const TopDescription = styled.div`
   flex-direction: column;
   justify-content: center;
   border-bottom: 2px solid #120a24;
-  padding-bottom:3vw;
+  padding-bottom:3vw ;
   align-items: center;
   overflow-y: hidden;
   margin-bottom: 2vh;
@@ -248,7 +248,7 @@ export const TopDescription = styled.div`
 
 export const TopAboutMe = styled.div`
   overflow: auto;
-  width: 60%;
+  width: 70%;
   @media (max-width: 60em) {
     display: flex;
     justify-content: center;
@@ -267,7 +267,7 @@ export const AboutMeDiv = styled.div`
   align-items: center;
   border-right: 2px solid #120a24;
   width: 98%;
-  height: 100%;
+  height: 80%;
   @media (max-width: 40em) {
     height: 100%;
     display:grid;
@@ -279,6 +279,7 @@ export const AboutMeDiv = styled.div`
 export const ProfilePicDiv = styled.div`
   max-height: 100%;
   max-width: 25%;
+  padding:2%;
   display: grid;
   margin:auto;
   @media (max-width: 40em) {
@@ -363,7 +364,10 @@ export const GroupTitle = styled.p`
   text-align: center;
   display: flex;
   align-items: center;
+
   width: 90%;
+  height:100%;
+  padding:5%;
   font-family: "Murecho";
   font-weight: 340;
   font-size: 5.2vh;
@@ -373,13 +377,20 @@ export const GroupTitle = styled.p`
   }
 `;
 export const TechGroupDiv = styled.div`
-  height: 70%;
+  height: 100%;
   width: 100%;
   display: flex;
-  padding-left: 70vw;
-  animation: ${scroll} 20s linear 3s infinite;
   justify-content: center;
   align-items: center;
+  animation: ${scroll} 20s linear 3s infinite;
+  @media (min-width: 30em) {
+  padding-left: 70vw;
+  }
+  @media (max-width: 30em) {
+    margin:0;
+    padding-left: 0vw;
+    padding-left: 130vw;
+  }
 `;
 export const TechItemDiv = styled.div`
   height: 100%;

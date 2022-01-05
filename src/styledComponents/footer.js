@@ -5,7 +5,7 @@ export const Main = styled.div`
     grid-template-row: 1fr 1fr 1fr;
   }
   @media (min-width: 40em) {
-    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
   }
   display: grid;
   padding: 1rem 0;
@@ -13,7 +13,7 @@ export const Main = styled.div`
     180deg,
     #ffffff 30%,
     rgba(137, 90, 235, 0.35) 95%,
-    rgba(44, 24, 87, 1) 100%
+    rgba(137, 90, 235, 0.35) 100%
   );
 `;
 
@@ -25,19 +25,26 @@ export const Column = styled.div`
 export const ColumnMenu = styled.div`
   display: flex;
   flex-direction: column;
-  margin-top: -10vh;
+  margin:auto;
   justify-content: space-evenly;
   align-items: center;
+  justify-content:center;
+  height:60%;
   @media (max-width: 40em) {
-    margin-top: -6vh;
+    margin-top: -3vh;
     padding-top: 4vh;
     padding-bottom: 5vh;
     flex-direction: row;
+
   }
 `;
 
 export const MenuItem = styled.div`
   height: 8vh;
+  @media (max-width: 40em) {
+    padding:2vh;
+    
+  }
 `;
 
 export const InfoText = styled.p`

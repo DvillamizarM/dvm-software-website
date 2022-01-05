@@ -9,7 +9,7 @@ import { Context } from "./Context.js";
 export default function App() {
   useEffect(() => {
     console.log("helllo effect");
-    window.scrollTo(0, 0);
+    // window.scrollTo(0, 0);
     WebFont.load({
       google: {
         families: ["Murecho", "Roboto"],
@@ -21,7 +21,7 @@ export default function App() {
   const [context, setContext] = useState(true);
 
   return (
-    <main>
+    <main >
       <Context.Provider value={[context, setContext]}>
         <header >
           <div>

@@ -211,10 +211,10 @@ export default function Home() {
               Soluciones informáticas para las pequeñas y grandes partes de tú
               día.
             </DescripcionText> */}
-            <div style={{ width: "70%" }}>
-              <FadedDiv style={{ padding: "0.2em" }}>
+            <div style={{ width: "40%" }}>
+              <FadedDiv style={{ padding: "0.1em" }}>
                 <Link to="/contactme" style={styles.menuBtn}>
-                  <BtnText style={{ fontSize: "4.5vw" }}>
+                  <BtnText style={{ fontSize: "3.5vw" }}>
                     <span>Más información</span>
                   </BtnText>
                 </Link>

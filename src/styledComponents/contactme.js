@@ -1,16 +1,16 @@
 import styled from "styled-components";
-
+// background: linear-gradient(
+//     180deg,
+//     rgba(240, 240, 240, 1) 30%,
+//     rgba(137, 90, 235, 0.5) 60%,
+//     rgba(240, 240, 240, 1) 100%
+//   );
 export const Main = styled.div`
   padding: 1rem 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: linear-gradient(
-    180deg,
-    rgba(240, 240, 240, 1) 30%,
-    rgba(137, 90, 235, 0.5) 60%,
-    rgba(240, 240, 240, 1) 100%
-  );
+  
 `;
 
 export const FormDescription = styled.h4`

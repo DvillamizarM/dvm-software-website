@@ -73,20 +73,21 @@ export const FadedDiv = styled.div`
   z-index: 1;
 `;
 
-// @media (max-width: 25em) {
-//   display: grid;
-//   grid-template-columns: 1fr 1fr;
-//   grid-template-rows: 1fr 1fr;
-//   grid-gap: 4px;
-//   height: 100%;
-//   margin-top: 1vh;
-// }
+
 export const MenuDiv = styled.div`
   gap: 4px;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   width: 100%;
   border-radius: 10vh 0% 0% 10vh;
+  @media (max-width: 25em) {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 4px;
+  height: 100%;
+  margin-top: 1vh;
+}
 `;
 
 export const Logo = styled.div`
